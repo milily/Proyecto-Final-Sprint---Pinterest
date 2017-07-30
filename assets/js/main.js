@@ -359,15 +359,25 @@ $(document).ready(function(){
 		}
 	];
 
+
 fotos.map(function(datos){
 	console.log(datos);
 	
-	$('#fotos-datos-pinterest').append(`<div style="width: 200px;">
-											<img src="dist/img/`+ datos.image_url +`" alt=""width="200px">
+	$('#fotos-datos-pinterest').append(`<div class="img-datos">
+											<img src="dist/img/`+ datos.image_url +`">
 											<p>`+ datos.description +`</p>
 											<p>`+ datos.user + ` #`+ datos.hashtag + `</p>
 										</div>`)
  })
+
+var elem = document.querySelector('#fotos-datos-pinterest');
+var msnry = new Masonry( elem, {
+  // options
+  itemSelector: '.img-datos',
+});
+
+// element argument can be a selector string
+//   for an individual element
 
 })
 
