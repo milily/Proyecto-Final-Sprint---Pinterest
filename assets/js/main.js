@@ -359,8 +359,14 @@ $(document).ready(function(){
 		}
 	];
 
-fotos.map(function(data){
-	console.log(data);
+fotos.map(function(datos){
+	console.log(datos);
+	
+	$('#fotos-datos-pinterest').append(`<div style="width: 200px;">
+											<img src="dist/img/`+ datos.image_url +`" alt=""width="200px">
+											<p>`+ datos.description +`</p>
+											<p>`+ datos.user + ` #`+ datos.hashtag + `</p>
+										</div>`)
  })
 
 })
