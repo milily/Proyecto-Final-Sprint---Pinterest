@@ -386,7 +386,6 @@ $('.img-datos').on('click',function(){
 
 	function descripcionFoto(imagen_id){
 
-
 		$('#fotos-pinterest').empty();
 
 		fotos.map(function(datos){

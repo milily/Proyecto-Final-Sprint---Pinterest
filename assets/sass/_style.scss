@@ -2,55 +2,7 @@
 	margin: 0;
 	padding: 0;
 }
-body{
-	font-family: 'Arimo', sans-serif;
-}
-nav{
-	i{
-		margin-top: 8px;
-		color: #CC0D0D;
-	}
-	a{
-		font-size: 18px;
-		font-weight: bolder;
-	}
-}
-.navbar-default{
-	background-color: white;
-}
-.dropdown{
-	button{
-		position: relative;
-		right: 20px;
-		margin-top: 8px;
-		border-radius: 0px;
-		background-color: #E1DFDF;
-		border-left: black;
-		border-color: #E1DFDF;
-		color: #969696;
-		font-weight: bolder;
-	}
-}
-.icon-times{
-	color: #BFBFBF;
-	position: relative;
-	right: 20px;
-}
-.navbar-default .navbar-nav>li>a, .navbar-default .navbar-text{
-	color:#BFBFBF;
-}
-.fa-pinterest:before{
-	font-size: 30px;	
-}
-.navbar-form{
-	.form-control{
-		font-family: 'Arimo', sans-serif !important;
-		width: 800px;
-		border-radius: 0px;
-		background-color: #E1DFDF;
-		border-color: #E1DFDF;
-	}
-}
+
 .container{
 	width: 90%;
 	padding: 15px auto;
@@ -61,7 +13,7 @@ nav{
 	float: left;
 	margin-right: 15px;
 	margin-bottom: 10px;
-	border-color: white;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.22);
 
 	img{
 		width: 200px;
@@ -73,12 +25,9 @@ nav{
 	}
 
 }
-.pint-title{
-	font-family: 'Arimo', sans-serif;
-	color: #ABABAB;
-	font-size: 2em;
-	font-weight: bolder;
 
+.modal-container{
+	
 }
 
 .img-datos2{
