@@ -359,8 +359,8 @@ $(document).ready(function(){
 		}
 	];
 
-//CON EL .MAP RECORRO EL JSON Y OBTENGO LOS DATOS QUE NECESITO Y LOS AGREGO AL DIV VACIO QUE//
-//ESTÁ EN EL HTML CON UN .APPEND//
+//CON EL .MAP RECORRO EL JSON Y OBTENGO LOS DATOS QUE NECESITO Y LOS AGREGO AL DIV VACIO QUE
+//ESTÁ EN EL HTML CON UN .APPEND
 fotos.map(function(datos){
 	
 	$('#fotos-datos-pinterest').append(`<div class="img-datos" id="`+datos.id+`">
@@ -370,13 +370,48 @@ fotos.map(function(datos){
 											<p>`+ datos.user + ` #`+ datos.hashtag + `</p>
 										</div>`)
  })
-//CÓDIGO QUE UTILICÉ DE LA PÁGINA DE MASONRY PARA INICIALIZARLO//
+//CÓDIGO QUE UTILICÉ DE LA PÁGINA DE MASONRY PARA INICIALIZARLO
 var elem = document.querySelector('.container');
 var msnry = new Masonry( elem, {
   // options
   itemSelector: '.img-datos',
 });
 
+$('.img-datos').on('click',function(){
+	var imagen_id = $(this).attr("id");
+	
+	descripcionFoto(imagen_id);
+});
+
+
+	function descripcionFoto(imagen_id){
+
+
+		$('#fotos-pinterest').empty();
+
+		fotos.map(function(datos){
+		
+			if(datos.id == imagen_id){
+				$('#fotos-pinterest').append(`<div class="img-datos2" id="`+datos.id+`">
+													<div class="header">
+														<i class="fa fa-check" aria-hidden="true"></i>
+														<i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+														<div class="button"> 
+															<i class="fa fa-thumb-tack" color="white" aria-hidden="true"></i> 
+															Guardar
+														</div>
+													</div>
+													<p class="title">`+ datos.title +`</p>
+													<img src="dist/img/`+ datos.image_url +`">
+													<p class="description">`+ datos.description +`</p>
+													<p class="sub">`+ datos.user + ` #`+ datos.hashtag + `</p>
+												</div>`)
+			 	
+			}
+		})
+
+		$('#modal').modal('show')
+	}
 
 })
 

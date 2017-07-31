@@ -23,4 +23,46 @@
 		padding: 10px;
 		font-size: 13px;
 	}
+
+}
+
+.modal-container{
+}
+
+.img-datos2{
+	
+	margin: 5px;
+	display: flex;
+	align-items:center;
+	flex-direction: column;
+	img{
+		border-radius: 10px;
+	}
+
+	p{
+		text-align:left;
+		width: 564px;
+		padding:5px;
+	}
+
+	.header{
+		flex-direction:row;
+		width: 564px;
+		flex-align:'flex-start';
+
+		.fa{
+			font-size:20px;
+			padding-top: 20px;
+		}
+		.button{
+			align-self:'flex-end';
+		}
+	}
+
+	.title{
+			font-size:20px;
+			font-weight: 700;
+			padding-top: 10px auto;
+	}
+
 }
