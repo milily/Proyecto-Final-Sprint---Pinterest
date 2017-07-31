@@ -365,7 +365,7 @@ fotos.map(function(datos){
 	
 	$('#fotos-datos-pinterest').append(`<div class="img-datos" id="`+datos.id+`">
 											<img src="dist/img/`+ datos.image_url +`">
-											<p>`+ datos.title +`</p>
+											<p class="pint-title">`+ datos.title +`</p>
 											<p>`+ datos.description +`</p>
 											<p>`+ datos.user + ` #`+ datos.hashtag + `</p>
 										</div>`)
@@ -386,7 +386,6 @@ $('.img-datos').on('click',function(){
 
 	function descripcionFoto(imagen_id){
 
-
 		$('#fotos-pinterest').empty();
 
 		fotos.map(function(datos){
@@ -397,8 +396,7 @@ $('.img-datos').on('click',function(){
 														<i class="fa fa-check" aria-hidden="true"></i>
 														<i class="fa fa-ellipsis-h" aria-hidden="true"></i>
 														<div class="button"> 
-															<i class="fa fa-thumb-tack" color="white" aria-hidden="true"></i> 
-															Guardar
+															<i class="fa fa-thumb-tack" color="white" aria-hidden="true"></i> Guardar
 														</div>
 													</div>
 													<p class="title">`+ datos.title +`</p>

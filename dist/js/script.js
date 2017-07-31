@@ -12997,7 +12997,7 @@ fotos.map(function(datos){
 	
 	$('#fotos-datos-pinterest').append(`<div class="img-datos" id="`+datos.id+`">
 											<img src="dist/img/`+ datos.image_url +`">
-											<p>`+ datos.title +`</p>
+											<p class="pint-title">`+ datos.title +`</p>
 											<p>`+ datos.description +`</p>
 											<p>`+ datos.user + ` #`+ datos.hashtag + `</p>
 										</div>`)
@@ -13025,6 +13025,16 @@ $('.img-datos').on('click',function(){
 		
 			if(datos.id == imagen_id){
 				$('#fotos-pinterest').append(`<div class="img-datos2" id="`+datos.id+`">
+<<<<<<< HEAD
+=======
+													<div class="header">
+														<i class="fa fa-check" aria-hidden="true"></i>
+														<i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+														<div class="button"> 
+															<i class="fa fa-thumb-tack" color="white" aria-hidden="true"></i> Guardar
+														</div>
+													</div>
+>>>>>>> 6e3aa5518fbb88204a31bcce11d8061aebb0330f
 													<p class="title">`+ datos.title +`</p>
 													<img src="dist/img/`+ datos.image_url +`">
 													<p class="description">`+ datos.description +`</p>
