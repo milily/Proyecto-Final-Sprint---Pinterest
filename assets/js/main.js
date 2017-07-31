@@ -365,7 +365,7 @@ fotos.map(function(datos){
 	
 	$('#fotos-datos-pinterest').append(`<div class="img-datos" id="`+datos.id+`">
 											<img src="dist/img/`+ datos.image_url +`">
-											<p>`+ datos.title +`</p>
+											<p class="pint-title">`+ datos.title +`</p>
 											<p>`+ datos.description +`</p>
 											<p>`+ datos.user + ` #`+ datos.hashtag + `</p>
 										</div>`)
