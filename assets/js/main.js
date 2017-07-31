@@ -359,25 +359,24 @@ $(document).ready(function(){
 		}
 	];
 
-
+//CON EL .MAP RECORRO EL JSON Y OBTENGO LOS DATOS QUE NECESITO Y LOS AGREGO AL DIV VACIO QUE//
+//ESTÁ EN EL HTML CON UN .APPEND//
 fotos.map(function(datos){
-	console.log(datos);
 	
-	$('#fotos-datos-pinterest').append(`<div class="img-datos">
+	$('#fotos-datos-pinterest').append(`<div class="img-datos" id="`+datos.id+`">
 											<img src="dist/img/`+ datos.image_url +`">
+											<p>`+ datos.title +`</p>
 											<p>`+ datos.description +`</p>
 											<p>`+ datos.user + ` #`+ datos.hashtag + `</p>
 										</div>`)
  })
-
-var elem = document.querySelector('#fotos-datos-pinterest');
+//CÓDIGO QUE UTILICÉ DE LA PÁGINA DE MASONRY PARA INICIALIZARLO//
+var elem = document.querySelector('.container');
 var msnry = new Masonry( elem, {
   // options
   itemSelector: '.img-datos',
 });
 
-// element argument can be a selector string
-//   for an individual element
 
 })
 
